@@ -1,12 +1,21 @@
+const time = document.querySelector('.time');
 
 
 
 
 function showTime() {
-    const time = document.querySelector('.time');
-    const date = new Date()
+    const date = new Date();
     const currentTime = date.toLocaleTimeString();
     time.textContent = currentTime;
-    setTimeout(showTime, 1000);
+    setTimeout(showTime, showDate, 1000);
+    
 }
-showTime()
+showTime();
+const dateCont = document.querySelector('date')
+function showDate() {
+    const date = new Date();
+    const options = {month: 'long', day: 'numeric', weekday: 'long'};
+    const currentDate = date.toLocaleDateString('en-EN', options);
+    dateCont.textContent = currentDate;
+}
+showDate()
