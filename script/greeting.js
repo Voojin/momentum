@@ -7,19 +7,19 @@ let greeting = document.querySelector('.greeting');
 
 switch (true) {
 
-    case (hours >= 5) && (hours < 11): greeting.innerHTML = 'Good morning,'
+    case (hours >5) && (hours < 12): greeting.innerHTML = 'Good morning,'
 
         break;
 
-    case (hours >= 11) && (hours < 16): greeting.innerHTML = 'Good day,'
+    case (hours >= 12) && (hours < 18): greeting.innerHTML = 'Good day,'
 
         break;
 
-    case (hours >= 16) && (hours <= 23): greeting.innerHTML = 'Good evening,'
+    case (hours >= 18) && (hours <= 23): greeting.innerHTML = 'Good evening,'
 
         break;
 
-    case (hours >= 0) && (hours < 5): greeting.innerHTML = 'Good night,'
+    case (hours >= 0) && (hours <= 5): greeting.innerHTML = 'Good night,'
 
         break;
 

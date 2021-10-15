@@ -6,9 +6,9 @@ const time = document.querySelector('.time');
 function showTime() {
     const date = new Date();
     const currentTime = date.toLocaleTimeString();
+    
     time.textContent = currentTime;
     setTimeout(showTime, showDate, 1000);
-    
 }
 showTime();
 const dateCont = document.querySelector('date')
@@ -19,3 +19,4 @@ function showDate() {
     dateCont.textContent = currentDate;
 }
 showDate()
+
