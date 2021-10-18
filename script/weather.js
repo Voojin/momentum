@@ -15,7 +15,7 @@ async function getWeather() {
   temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
   weatherDescription.textContent = data.weather[0].description;
   humidity.textContent = `Humidity: ${data.main.humidity}%`
-  wind.textContent = `Wind: ${data.wind.speed} m/s`
+  wind.textContent = `Wind speed: ${data.wind.speed} m/s`
 }
 
 function setCity(event) {
