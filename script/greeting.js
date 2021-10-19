@@ -1,13 +1,13 @@
 const date = new Date();
 const hours = date.getHours();
 let greeting = document.querySelector('.greeting');
-let partDay = ''
+
 const body = document.querySelector('body');
 let randomMainBg = randomInteger(1, 20);
 let timeOfDay = '';
 
 
-console.log(randomMainBg)
+
 
 function randomInteger(min, max) {
 
@@ -54,21 +54,8 @@ if (hours > 5 && hours < 12) {
     body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${randomMainBg.toString().padStart(2, '0')}.jpg')`
 }
 
-console.log(timeOfDay)
-// document.querySelector(".slide-next").addEventListener('click', () => {
-//     body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${randomMainBg++}.jpg')`
-
-//     body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${randomMainBg.toString().padStart(2, '0')}.jpg')`
 
 
-// } )
-// console.log(randomMainBg)
-// document.querySelector(".slide-prev").addEventListener('click', () => {
-//     body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${randomMainBg--}.jpg')`
-//     body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${randomMainBg.toString().padStart(2, '0')}.jpg')`
-
-
-// } )
 
 
 const nextSlide = () => {
