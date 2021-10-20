@@ -20,7 +20,7 @@
       </div>
       <ul class="play-list"></ul>
     </div>
-    <div class="weather">
+    <div id="cat" class="weather">
 
       <input placeholder="Enter the city" type="text" class="city" />
 
@@ -35,8 +35,9 @@
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>
+     <button class="sett-btn"> <img  src="assets/svg/setting.svg" alt=""></button>
     </div>
-    <div class="main-settings">
+    <div class="main-settings ">
       <div class="lang">
         <span>
           Сменить язык.
@@ -47,7 +48,36 @@
         </select>
       </div>
       <div class="img-source"></div>
-      <div class="blocks"></div>
+      <div class="blocks">
+        <div class="weather-set">
+          <span>Weather</span>
+        <button class="weather-btn">Hide</button>
+        </div>
+
+        <div class="greeting-set">
+          <span>Greeting</span>
+        <button class="greeting-btn">Hide</button>
+        </div>
+
+        <div class="time-set">
+          <span>Time</span>
+        <button class="time-btn">Hide</button>
+        </div>
+        <div class="date-set">
+          <span>Date</span>
+        <button class="date-btn">Hide</button>
+        </div>
+
+        <div class="quote-set">
+          <span>Quote</span>
+        <button class="quote-btn">Hide</button>
+        </div>
+        <div class="player-set">
+          <span>Player</span>
+        <button class="player-btn">Hide</button>
+        </div>
+
+      </div>
 
       sdsdsds
     </div>
@@ -78,6 +108,7 @@
   <script src="script/greeting.js"></script>
   <script src="script/quote.js"></script>
   <script src="script/player.js"></script>
+  <script src="script/setting.js"></script>
 
 
 </body>

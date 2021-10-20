@@ -123,6 +123,9 @@ body {
   width: 180px;
   min-height: 180px;
   text-align: left;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+
 }
 
 .temperature, .weather-description {
@@ -291,9 +294,12 @@ body {
   }
 }
 
+
+
 .main-settings {
+  top: 0px;
   position: absolute;
-  left: 60%;
+  right: 15%;
   border: 1px solid greenyellow;
   width: 250px;
   height: 400px;
@@ -302,7 +308,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-content: center;
+  
+  padding: 5px;
+  transition: all 1s ease-in-out;
+
+}
+
+.hide {
+  top: -1000px;
+  transition: all 1s ease-in-out;
+  
 }
 
 .lang {
@@ -319,10 +334,86 @@ body {
 }
 
 .blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   height: 200px;
   border: 2px solid cyan;
+  gap: 10px;
 }
 
 .lang-choose {
   display: block;
+  background-color: greenyellow;
+  text-align: center;
+}
+
+.sett-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+  background: none;
+  border: 0;
+}
+
+.sett-btn:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.off {
+
+opacity: 0;
+transition: all 1s ease-in;
+}
+.weather-btn,
+.greeting-btn,
+.time-btn,
+.quote-btn,
+.player-btn, 
+.date-btn 
+{
+  margin-left: 120px;
+  width: 50px;
+  background-color: green;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.weather-btn:active, 
+.greeting-btn:active, 
+.time-btn:active,
+.player-btn:active,
+.quote-btn:active,
+.date-btn:active
+{
+  border: 0;
+  outline: 0;
+  transform: skew(-0.06turn, 18deg);
+  
+  
+}
+
+.weather-set,
+.greeting-set,
+.time-set,
+.quote-set,
+.player-set, 
+.date-set {
+  display: flex;
+  flex-direction: row;
+  align-self:flex-end;
+  
+}
+
+.weather-set,
+.greeting-set,
+.time-set,
+.quote-set,
+.player-set span {
+  
+  color: green;
+
 }
