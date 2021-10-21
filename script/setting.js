@@ -12,6 +12,7 @@ const timeBtn = document.querySelector('.time-btn');
 const timelist = document.querySelector('.time');
 const dateBtn = document.querySelector('.date-btn');
 const datelist = document.querySelector('.date');
+const setLng = document.querySelector('.lang-choose')
 
 
 settingBtn.onclick = function () {
@@ -83,6 +84,13 @@ dateBtn.onclick = function () {
         dateBtn.style.backgroundColor = 'green'
     }
 }
+setLng.onclick = function () {
+    setLng.classList.toggle('ru');
+if (setLng.classList.contains('ru') && datelist.classList.contains('off')) {
+    dateBtn.textContent = 'Показать'
+}
+
+}   
 
 
 
