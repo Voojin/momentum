@@ -30,15 +30,18 @@ city.addEventListener('keypress', setCity);
 
 function setLocalStorage() {
   const city = document.querySelector('.city')
+
   localStorage.setItem('city', city.value);
+
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
 function getLocalStorage() {
   const city = document.querySelector('.city')
-  if (localStorage.getItem('city')) {
-    city.value = localStorage.getItem('city');
-  }
+
+
+  city.value = localStorage.getItem('city');
+
 }
 window.addEventListener('load', getLocalStorage)
 window.onload = getWeather;

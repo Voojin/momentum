@@ -83,7 +83,7 @@ const prevSlide = () => {
     }
 }
 
-
+window.addEventListener('load', getLocalStorage)
 
 document.querySelector(".slide-next").addEventListener('click', nextSlide)
 document.querySelector(".slide-prev").addEventListener('click', prevSlide)

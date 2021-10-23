@@ -16,10 +16,13 @@
       <div class="player-controls">
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
+        
         <button class="play-next player-icon"></button>
       </div>
-      <ul class="play-list"></ul>
-      <li><audio class="audio" src="https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3" ></audio></li>
+      <div class="mute"><button>ssssss</button></div>
+      <ul class="play-list">
+      <li><audio class="audio" src="https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3">DDDDDDDDDDDDDDDD</audio></li>
+    </ul>
     </div>
     <div id="cat" class="weather">
 
@@ -36,9 +39,9 @@
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>
-     <button class="sett-btn"> <img  src="assets/svg/setting.svg" alt=""></button>
     </div>
-    <div class="main-settings ">
+    <button class="sett-btn"> <img  src="assets/svg/setting.svg" alt=""></button>
+    <div id="sett" class="main-settings ">
       <div class="lang">
         <span>
           Сменить язык.
@@ -50,17 +53,17 @@
       <div class="blocks">
         <div class="weather-set">
           <span>Weather</span>
-        <button class="weather-btn">Hide</button>
+        <button id="weather" class="weather-btn">Hide</button>
         </div>
 
         <div class="greeting-set">
           <span>Greeting</span>
-        <button class="greeting-btn">Hide</button>
+        <button id="greeting" class="greeting-btn">Hide</button>
         </div>
 
         <div class="time-set">
           <span>Time</span>
-        <button class="time-btn">Hide</button>
+        <button class="timebtn">Hide</button>
         </div>
         <div class="date-set">
           <span>Date</span>
@@ -86,7 +89,7 @@
       <button class="slide-prev slider-icon"></button>
       <button class="slide-next slider-icon"></button>
     </div>
-    <time class="time"></time>
+    <time class="time timew"></time>
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>

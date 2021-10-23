@@ -116,6 +116,7 @@ body {
 }
 
 .weather {
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +127,6 @@ body {
   text-align: left;
   transition: opacity 1s ease-in-out;
   opacity: 1;
-
 }
 
 .temperature, .weather-description {
@@ -201,7 +201,7 @@ body {
   background-image: url("../assets/svg/slider-next.svg");
 }
 
-.time {
+.time-btn {
   min-height: 124px;
   margin-bottom: 10px;
   font-family: 'Arial-MT';
@@ -295,8 +295,6 @@ body {
   }
 }
 
-
-
 .main-settings {
   top: 0px;
   position: absolute;
@@ -306,19 +304,12 @@ body {
   height: 400px;
   background-color: greenyellow;
   z-index: 1;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+  transition: all .5s ease-in;
   padding: 5px;
-  transition: all 1s ease-in-out;
-
-}
-
-.hide {
-  top: -1000px;
-  transition: all 1s ease-in-out;
-  
 }
 
 .lang {
@@ -326,12 +317,13 @@ body {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  
 }
+
 .lang-choose {
   width: 50px;
   height: 50px;
 }
+
 .img-source {
   height: 50px;
   border: 1px solid darkred;
@@ -359,11 +351,12 @@ body {
   opacity: 0.5;
   background: none;
   border: 0;
-  
 }
+
 .sett-btn img {
   width: 25px;
 }
+
 .sett-btn img:hover {
   width: 45px;
 }
@@ -374,17 +367,11 @@ body {
 }
 
 .off {
-
-opacity: 0;
-transition: all 1s ease-in;
+  opacity: 0;
+  transition: all 1s ease-in;
 }
-.weather-btn,
-.greeting-btn,
-.time-btn,
-.quote-btn,
-.player-btn, 
-.date-btn 
-{
+
+.weather-btn, .greeting-btn, .timebtn, .quote-btn, .player-btn, .date-btn {
   margin-left: 120px;
   width: 50px;
   background-color: green;
@@ -392,39 +379,57 @@ transition: all 1s ease-in;
   border-radius: 10px;
 }
 
-
-.weather-btn:active, 
-.greeting-btn:active, 
-.time-btn:active,
-.player-btn:active,
-.quote-btn:active,
-.date-btn:active
-{
+.weather-btn:active, .greeting-btn:active, .timebtn:active, .player-btn:active, .quote-btn:active, .date-btn:active {
   border: 0;
   outline: 0;
   transform: skew(-0.06turn, 18deg);
-  
-  
 }
 
-.weather-set,
-.greeting-set,
-.time-set,
-.quote-set,
-.player-set, 
-.date-set {
+.weather-set, .greeting-set, .time-set, .quote-set, .player-set, .date-set {
   display: flex;
   flex-direction: row;
-  align-self:flex-end;
-  
+  align-self: flex-end;
 }
 
-.weather-set,
-.greeting-set,
-.time-set,
-.quote-set,
-.player-set span {
-  
+.weather-set, .greeting-set, .time-set, .quote-set, .player-set span {
   color: green;
+}
 
+.audio-player .controls .volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.audio-player .controls .volume-container .volume-button {
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.audio-player .controls .volume-container .volume-button .volume {
+  transform: scale(0.7);
+}
+
+.audio-player .controls .volume-container .volume-slider {
+  position: absolute;
+  left: -3px;
+  top: 15px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px #000a;
+  transition: 0.25s;
+}
+
+.audio-player .controls .volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+
+.audio-player .controls .volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
 }
