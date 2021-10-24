@@ -32,6 +32,7 @@ body {
   height: 30vh;
   min-height: 220px;
   padding: 20px;
+
 }
 
 .player-controls {
@@ -201,15 +202,17 @@ body {
   background-image: url("../assets/svg/slider-next.svg");
 }
 
-.time-btn {
+.time {
   min-height: 124px;
   margin-bottom: 10px;
   font-family: 'Arial-MT';
   font-size: 100px;
   letter-spacing: -4px;
+  transition: opacity 1s ease-in-out;
 }
 
 .date {
+  transition: opacity 1s ease-in-out;
   min-height: 28px;
   font-size: 24px;
   margin-bottom: 20px;
@@ -223,6 +226,7 @@ body {
   min-height: 48px;
   width: 100vw;
   font-size: 40px;
+  transition: opacity 1s ease-in-out;
 }
 
 .greeting {
@@ -254,9 +258,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 30vh;
-  min-height: 160px;
-  padding: 20px;
+  height: 20vh;
+  min-height: 120px;
+  padding: 0px;
+  transition: opacity 1s ease-in-out;
 }
 
 .change-quote {
@@ -264,12 +269,10 @@ body {
   background-image: url("../assets/svg/reload.svg");
 }
 
-.change {
-  margin-bottom: 10px;
-  background-image: url("../assets/svg/reload.svg");
-}
+
 
 .quote {
+  
   min-height: 32px;
 }
 
@@ -283,10 +286,12 @@ body {
     font-size: 72px;
   }
   .greeting-container {
+    transition: opacity 1s ease-in-out;
     min-height: 40px;
     font-size: 32px;
   }
   .greeting {
+    
     padding: 5px;
   }
   .name {
@@ -294,27 +299,84 @@ body {
     padding: 5px;
   }
 }
+.todolist {
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0);
+  top: 0px;
+  position: absolute;
+  right: 45%;
+  border: 1px solid rgb(144, 148, 148);
+  width: 270px;
+  height: 400px;
+  background-color: rgb(153, 56, 233);
+  z-index: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all .5s ease-in;
+  padding: 15px;
 
+}
+.dolist {
+  list-style: none;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.dolist li {
+display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+
+  
+}
+.dotext {
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  font-size: 13px;
+
+}
+.dodo {
+  text-decoration: line-through;
+  transition: all .5s ease-in-out;
+}
+.do_case_check{
+  width: 20px;
+}
+.doitem {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
 .main-settings {
+
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0);
   top: 0px;
   position: absolute;
   right: 15%;
-  border: 1px solid greenyellow;
+  border: 1px solid rgb(144, 148, 148);
   width: 250px;
   height: 400px;
-  background-color: greenyellow;
+  background-color: rgb(153, 56, 233);
   z-index: 1;
   visibility: hidden;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: all .5s ease-in;
-  padding: 5px;
+  padding: 15px;
 }
 
 .lang {
   height: 50px;
-  border: 1px solid red;
+
   display: flex;
   flex-direction: column;
 }
@@ -326,7 +388,7 @@ body {
 
 .img-source {
   height: 50px;
-  border: 1px solid darkred;
+
 }
 
 .blocks {
@@ -334,13 +396,14 @@ body {
   flex-direction: column;
   align-items: flex-start;
   height: 200px;
-  border: 2px solid cyan;
+
   gap: 10px;
 }
 
 .lang-choose {
+  width: 200px;
   display: block;
-  background-color: greenyellow;
+  background-color: rgb(140, 0, 153);
   text-align: center;
 }
 
@@ -364,19 +427,23 @@ body {
 .sett-btn:hover {
   opacity: 1;
   transition: all 1s;
+  
 }
 
 .off {
   opacity: 0;
   transition: all 1s ease-in;
+  pointer-events: none;
 }
-
+.player {
+  transition: all 1s ease-in;
+}
 .weather-btn, .greeting-btn, .timebtn, .quote-btn, .player-btn, .date-btn {
-  margin-left: 120px;
+  margin-left: 100px;
   width: 50px;
   background-color: green;
-  border: none;
-  border-radius: 10px;
+  
+  border-radius: 5px;
 }
 
 .weather-btn:active, .greeting-btn:active, .timebtn:active, .player-btn:active, .quote-btn:active, .date-btn:active {
@@ -391,8 +458,8 @@ body {
   align-self: flex-end;
 }
 
-.weather-set, .greeting-set, .time-set, .quote-set, .player-set span {
-  color: green;
+.weather-set, .greeting-set, .time-set, .quote-set, .player-set, .date-set span {
+  color: rgb(131, 249, 255);
 }
 
 .audio-player .controls .volume-container {
