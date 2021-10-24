@@ -308,7 +308,7 @@ body {
   border: 1px solid rgb(144, 148, 148);
   width: 270px;
   height: 400px;
-  background-color: rgb(153, 56, 233);
+  background-color: rgb(181, 142, 212);
   z-index: 1;
   visibility: visible;
   display: flex;
@@ -338,7 +338,7 @@ display: flex;
   padding-left: 10px;
   border-radius: 5px;
   border: none;
-  height: 25px;
+  height: 28px;
   font-size: 13px;
 
 }
