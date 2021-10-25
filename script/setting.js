@@ -9,30 +9,21 @@ const quotelist = document.querySelector('.footer');
 const greetingBtn = document.querySelector('.greeting-btn');
 const greetinglist = document.querySelector('.greeting-container');
 const timeBtn = document.querySelector('.timebtn');
-
-
 const dateBtn = document.querySelector('.date-btn');
 const datelist = document.querySelector('.date');
-
-
-
-
-const sett = document.getElementById('sett');
+const closesett = document.querySelector('.closesett')
 
 settingBtn.onclick = function () {
-    sett.style.visibility = (sett.style.visibility == 'visible') ? '' : 'visible';
-    localStorage.setItem('hide', sett.style.visibility); // сохраняем значение в ключ hide
+    settingList.classList.toggle('off');
+}
+closesett.onclick = function () {
+    settingList.classList.add('off')
 }
 
-if (localStorage.getItem('hide') == 'visible') { // если значение ключа hide "inline"
-    document.getElementById('sett').style.visibility = 'visible';
-}
 
 
 
-// settingBtn.onclick = function () {
-//     settingList.classList.toggle('hide');
-// }
+
 weatherBtn.onclick = function () {
     weatherList.classList.toggle('off');
     if (weatherList.classList.contains('off')) {
@@ -41,7 +32,7 @@ weatherBtn.onclick = function () {
 
     } else {
         weatherBtn.textContent = 'Hide'
-        weatherBtn.style.backgroundColor = 'green'
+        weatherBtn.style.backgroundColor = 'rgb(81, 255, 81)'
     }
 
 }
@@ -70,7 +61,7 @@ playerBtn.onclick = function () {
         playerBtn.style.backgroundColor = 'red'
     } else {
         playerBtn.textContent = 'Hide'
-        playerBtn.style.backgroundColor = 'green'
+        playerBtn.style.backgroundColor = 'rgb(81, 255, 81)'
     }
 
 }
@@ -99,7 +90,7 @@ quoteBtn.onclick = function () {
         quoteBtn.style.backgroundColor = 'red'
     } else {
         quoteBtn.textContent = 'Hide'
-        quoteBtn.style.backgroundColor = 'green'
+        quoteBtn.style.backgroundColor = 'rgb(81, 255, 81)'
 
     }
 
@@ -135,7 +126,7 @@ greetingBtn.onclick = function () {
         greetingBtn.style.backgroundColor = 'red'
     } else {
         greetingBtn.textContent = 'Hide'
-        greetingBtn.style.backgroundColor = 'green'
+        greetingBtn.style.backgroundColor = 'rgb(81, 255, 81)'
     }
 
 }
@@ -171,7 +162,7 @@ timeBtn.onclick = function () {
         timeBtn.style.backgroundColor = 'red'
     } else {
         timeBtn.textContent = 'Hide'
-        timeBtn.style.backgroundColor = 'green'
+        timeBtn.style.backgroundColor = 'rgb(81, 255, 81)'
     }
 }
 function setTimeLoc() {
@@ -205,7 +196,7 @@ dateBtn.onclick = function () {
         dateBtn.style.backgroundColor = 'red'
     } else {
         dateBtn.textContent = 'Hide'
-        dateBtn.style.backgroundColor = 'green'
+        dateBtn.style.backgroundColor = 'rgb(81, 255, 81)'
     }
 }
 
